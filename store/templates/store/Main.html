@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 
-        <script>
+        <script type="text/javascript">
           var user = '{{request.user}}'
           
           //token that is gonna be available at fetch call
@@ -18,8 +18,8 @@
               for (var i=0;i < cookies.length;i++){
                 var cookie = cookies[i].trim();
                 //Does this cookie string begin with the name we want?
-                if(cookie.substring(0,name.length+1)===(name + '=')){
-                  cookieValue = decodeURIComponent(cookie.substring(name.length+1));
+                if(cookie.substring(0,name.length + 1) === (name + '=')){
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                   break;
                 }
               }
