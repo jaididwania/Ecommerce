@@ -80,7 +80,7 @@ def updateItem(request):
     return JsonResponse('Item Added',safe=False)
 
 def processorder(request):
-    
+
     transaction_id = datetime.datetime.now().timestamp()
     data = json.loads(request.body)
 
@@ -99,7 +99,7 @@ def processorder(request):
             ShippingAddress.objects.create(
                 customer = customer,
                 order = order,
-                address = data['shipping']['address'],
+                adderss = data['shipping']['address'],
                 city = data['shipping']['city'],
                 state = data['shipping']['state'],
                 pincode = data['shipping']['pincode'],

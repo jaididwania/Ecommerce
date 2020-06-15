@@ -46,7 +46,7 @@ class Migration(migrations.Migration):
             name='ShippingAddress',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('address', models.CharField(max_length=200, null=True)),
+                ('adderss', models.CharField(max_length=200, null=True)),
                 ('city', models.CharField(max_length=200, null=True)),
                 ('state', models.CharField(max_length=200, null=True)),
                 ('pincode', models.CharField(max_length=200, null=True)),
